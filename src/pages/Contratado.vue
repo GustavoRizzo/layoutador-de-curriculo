@@ -1,29 +1,7 @@
 <template>
 <div>
-    <div id="cabecalho">
-        <h1>Gustavo Rizzo Soares Mandes de Albuquerque</h1>
-        <div id="Porfissão">
-            <h2>Engenheiro de Controle e Automação</h2>
-        </div>
-        <ul id="dados-contato">
-            <li>
-                <i class="icon far fa-user"></i>
-                <span>Brasileiro, solteiro, 27 anos (07/05/1993)</span>
-            </li>
-            <li>
-                <i class="icon fas fa-map-marker-alt"></i>
-                <span>Tijuca - Rio de Janeiro - RJ</span>
-            </li>
-            <li>
-                <i class="icon fas fa-mobile-alt"></i>
-                <a href="tel:+55-21-98866-2374">+55 (21) 988662374</a>
-            </li>
-            <li>
-                <i class="icon far fa-envelope"></i>
-                <a href="mailto: grizzo.albu@gmail.com">grizzo.albu@gmail.com</a>
-            </li>
-        </ul>
-    </div>
+
+    <Cabecalho></Cabecalho>
 
     <div class="formacao-academica sessao">
         <div class="titulo-card">
@@ -128,10 +106,15 @@
 </template>
 
 <script>
+import Cabecalho from '../components/layout1/Cabecalho'
+
 export default {
     name: 'Contratado',
     data() {
         return {}
+    },
+    components: {
+        Cabecalho
     }
 }
 </script>
@@ -140,17 +123,12 @@ export default {
 
 @font-face{
     font-family: 'gotham bold';
-    src: url(../../assets/font/GothamBold.ttf);
+    src: url(../assets/font/GothamBold.ttf);
 }
 
 @font-face {
     font-family: 'myriad pro';
-    src: url(../../assets/font/myriad-pro-black-condensed.otf);
-}
-
-#cabecalho{
-    background-color: #08b99d;
-    padding: 30px 30px 10px 30px;
+    src: url(../assets/font/myriad-pro-black-condensed.otf);
 }
 
 h1{
@@ -164,19 +142,6 @@ h2{
     font-size: 20px;
     font-weight: 650;
     margin: 2px;
-}
-
-#Porfissão{
-    display: inline-flex;
-    background-color:  #e3e8ec;
-    padding: 0 10px;
-    text-align: center;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
-#Porfissão h2{
-    font-size: 15px;
 }
 
 li{

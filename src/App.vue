@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="container">
     <router-view/>
   </div>
 </template>
@@ -11,7 +11,7 @@ export default {
 </script>
 
 <style>
-@import "/components/util/reset.css";
+/*@import "/components/util/reset.css";*/
 
 #app {
   /*font-family: 'Avenir', Helvetica, Arial, sans-serif;
