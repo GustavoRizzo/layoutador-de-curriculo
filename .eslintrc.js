@@ -31,6 +31,7 @@ module.exports = {
     'space-before-function-paren': 'off',
     'semi': 'off',
     'space-before-blocks': 'off',
-    'space-in-parens': 'off'
+    'space-in-parens': 'off',
+    'padded-blocks': 'off'
   }
 }

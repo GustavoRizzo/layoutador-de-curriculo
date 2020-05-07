@@ -1,7 +1,7 @@
 <template>
 <div>
 
-    <Cabecalho></Cabecalho>
+    <Cabecalho v-bind:informacoesPessoais="infoCabecalho" ></Cabecalho>
 
     <div class="formacao-academica sessao">
         <div class="titulo-card">
@@ -107,11 +107,14 @@
 
 <script>
 import Cabecalho from '../components/layout1/Cabecalho'
+import InformacoesPessoais from '../models/InformacoesPessoais'
 
 export default {
     name: 'Contratado',
     data() {
-        return {}
+        return {
+            infoCabecalho: new InformacoesPessoais('arg', 'profissao222')
+        }
     },
     components: {
         Cabecalho

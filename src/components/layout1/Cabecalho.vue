@@ -1,9 +1,9 @@
 <template>
 <div>
     <div id="cabecalho">
-        <h1>Gustavo Rizzo Soares Mandes de Albuquerque</h1>
+        <h1>{{informacoesPessoais.nome}}</h1>
         <div id="Porfissão">
-            <h2>Engenheiro de Controle e Automação</h2>
+            <h2>{{informacoesPessoais.profissao}}</h2>
         </div>
         <ul id="dados-contato">
             <li>
@@ -28,8 +28,16 @@
 </template>
 
 <script>
+
+import InformacoesPessoais from '../../models/InformacoesPessoais'
+
 export default {
     name: 'Cabecalho',
+    props: {
+        informacoesPessoais: {
+            type: InformacoesPessoais
+        }
+    },
     data() {
         return {}
     }
