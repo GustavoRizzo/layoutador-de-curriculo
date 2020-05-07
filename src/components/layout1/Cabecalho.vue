@@ -28,7 +28,6 @@
 </template>
 
 <script>
-
 import InformacoesPessoais from '../../models/InformacoesPessoais'
 
 export default {
