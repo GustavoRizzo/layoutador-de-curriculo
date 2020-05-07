@@ -113,7 +113,7 @@ export default {
     name: 'Contratado',
     data() {
         return {
-            infoCabecalho: new InformacoesPessoais('arg', 'profissao222')
+            infoCabecalho: new InformacoesPessoais('Gustavo Rizzo', 'Engenheiro')
         }
     },
     components: {
