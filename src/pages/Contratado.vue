@@ -108,6 +108,7 @@
 <script>
 import Cabecalho from '../components/layout1/Cabecalho'
 import InformacoesPessoais from '../models/InformacoesPessoais'
+import CurriculoService from '../services/CurriculoService'
 
 export default {
     name: 'Contratado',
@@ -121,6 +122,14 @@ export default {
     },
     components: {
         Cabecalho
+    },
+    methods: {
+        getInformacoesPessoais: function (){
+            this.infoCabecalho = CurriculoService.getInformacoesPessoaisGustavo();
+        }
+    },
+    created(){
+        this.getInformacoesPessoais();
     }
 }
 </script>

@@ -1,0 +1,19 @@
+{
+    "Curriculo": {
+      "InformacoesPessoais": {
+        "nome": "Gustavo Rizzo",
+        "profissao": "eletricista",
+        "naturalidade": "Brasileiro",
+        "estadoCivil": "Solteiro",
+        "dataNascimento": "1993-05-07T03:00:00.000Z",
+        "ddd": "21",
+        "celular": "988662374",
+        "email": "grizzo.albu@gmail.com"
+      },
+      "endereco": {
+        "pais": "Brasil",
+        "UF": "RJ",
+        "cidade": "Rio de Janeiro"
+      }
+    }
+  }
