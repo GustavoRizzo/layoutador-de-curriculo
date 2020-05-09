@@ -32,6 +32,7 @@ module.exports = {
     'semi': 'off',
     'space-before-blocks': 'off',
     'space-in-parens': 'off',
-    'padded-blocks': 'off'
+    'padded-blocks': 'off',
+    'camelcase': 'off'
   }
 }

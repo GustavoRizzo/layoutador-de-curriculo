@@ -8,19 +8,19 @@
         <ul id="dados-contato">
             <li>
                 <i class="icon far fa-user"></i>
-                <span>Brasileiro, solteiro, 27 anos (07/05/1993)</span>
+                <span>{{informacoesPessoais.naturalidade}}, {{informacoesPessoais.estadoCivil}}, {{informacoesPessoais.idade}} anos</span>
             </li>
             <li>
                 <i class="icon fas fa-map-marker-alt"></i>
-                <span>Tijuca - Rio de Janeiro - RJ</span>
+                <span>{{endereco.endereco_completo}}</span>
             </li>
             <li>
                 <i class="icon fas fa-mobile-alt"></i>
-                <a href="tel:+55-21-98866-2374">+55 (21) 988662374</a>
+                <a :href="informacoesPessoais.ref_celular"> +55-{{informacoesPessoais.ddd}}-{{informacoesPessoais.celular}}</a>
             </li>
             <li>
                 <i class="icon far fa-envelope"></i>
-                <a href="mailto: grizzo.albu@gmail.com">grizzo.albu@gmail.com</a>
+                <a :href=" `mailto:${informacoesPessoais.email}`">{{informacoesPessoais.email}}</a>
             </li>
         </ul>
     </div>
@@ -29,12 +29,16 @@
 
 <script>
 import InformacoesPessoais from '../../models/InformacoesPessoais'
+import Endereco from '../../models/Endereco'
 
 export default {
     name: 'Cabecalho',
     props: {
         informacoesPessoais: {
             type: InformacoesPessoais
+        },
+        endereco: {
+            type: Endereco
         }
     },
     data() {

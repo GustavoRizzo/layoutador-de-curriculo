@@ -1,7 +1,7 @@
 <template>
 <div>
 
-    <Cabecalho v-bind:informacoesPessoais="infoCabecalho" ></Cabecalho>
+    <Cabecalho :informacoesPessoais="infoCabecalho.pessoais" :endereco="infoCabecalho.endereco"></Cabecalho>
 
     <div class="formacao-academica sessao">
         <div class="titulo-card">
@@ -107,17 +107,13 @@
 
 <script>
 import Cabecalho from '../components/layout1/Cabecalho'
-import InformacoesPessoais from '../models/InformacoesPessoais'
 import CurriculoService from '../services/CurriculoService'
 
 export default {
     name: 'Contratado',
     data() {
         return {
-            infoCabecalho: new InformacoesPessoais({
-                nome: 'Gustavo Rizzo',
-                profissao: 'Engenheiro'
-            })
+            infoCabecalho: {}
         }
     },
     components: {
@@ -125,11 +121,15 @@ export default {
     },
     methods: {
         getInformacoesPessoais: function (){
-            this.infoCabecalho = CurriculoService.getInformacoesPessoaisGustavo();
+            this.infoCabecalho.pessoais = CurriculoService.getInformacoesPessoaisGustavo();
+        },
+        getInformacoesEndereco: function (){
+            this.infoCabecalho.endereco = CurriculoService.getInformacoesEnderecoGustavo();
         }
     },
     created(){
         this.getInformacoesPessoais();
+        this.getInformacoesEndereco();
     }
 }
 </script>

@@ -11,4 +11,16 @@ export default class InformacoesPessoais {
         this.email = obj.email;
     }
 
+    get idade() {
+
+        let diff_ms = Date.now() - this.dataNascimento.getTime();
+        let age_dt = new Date(diff_ms);
+
+        return Math.abs(age_dt.getUTCFullYear() - 1970);
+    }
+
+    get ref_celular (){
+        return `+55-${this.ddd}-${this.celular}`;
+    }
+
 }

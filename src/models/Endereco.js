@@ -6,4 +6,8 @@ export default class Endereco {
         this.cidade = obj.cidade;
     }
 
+    get endereco_completo (){
+        return `${this.cidade} - ${this.uf} - ${this.pais}`;
+    }
+
 }
