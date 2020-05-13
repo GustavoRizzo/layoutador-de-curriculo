@@ -1,6 +1,18 @@
 export default class InformacoesPessoais {
 
     constructor(obj){
+        let default_values = {
+            nome: '',
+            profissao: '',
+            naturalidade: '',
+            estadoCivil: '',
+            dataNascimento: new Date(),
+            ddd: '',
+            celular: '',
+            email: ''
+        }
+        obj = {...default_values, ...obj};
+
         this.nome = obj.nome;
         this.profissao = obj.profissao;
         this.naturalidade = obj.naturalidade;
