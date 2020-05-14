@@ -9,12 +9,12 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/',
+      path: '/Contratado',
       name: 'Contratado',
       component: Contratado
     },
     {
-      path: '/FormularioCurriculo',
+      path: '/',
       name: 'FormularioCurriculo',
       component: FormularioCurriculo
     },

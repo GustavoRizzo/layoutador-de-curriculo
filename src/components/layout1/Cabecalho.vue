@@ -10,10 +10,12 @@
                 <i class="icon far fa-user"></i>
                 <span>{{informacoesPessoais.naturalidade}}, {{informacoesPessoais.estadoCivil}}, {{informacoesPessoais.idade}} anos</span>
             </li>
+
             <li>
                 <i class="icon fas fa-map-marker-alt"></i>
                 <span>{{endereco.endereco_completo}}</span>
             </li>
+
             <li>
                 <i class="icon fas fa-mobile-alt"></i>
                 <a :href="informacoesPessoais.ref_celular"> +55-{{informacoesPessoais.ddd}}-{{informacoesPessoais.celular}}</a>

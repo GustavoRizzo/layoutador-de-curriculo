@@ -5,10 +5,6 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
     state: {
-        user: {
-            name: 'Gustavo',
-            email: 'jamelao@email.com'
-        },
         formularioCurriculo: {}
     },
     mutations: {

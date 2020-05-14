@@ -111,13 +111,13 @@ import CurriculoService from '../services/CurriculoService'
 
 export default {
     name: 'Contratado',
+    components: {
+        Cabecalho
+    },
     data() {
         return {
             infoCabecalho: {}
         }
-    },
-    components: {
-        Cabecalho
     },
     methods: {
         getInformacoesPessoais: function (){
