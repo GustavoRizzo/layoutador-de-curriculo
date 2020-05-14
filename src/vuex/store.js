@@ -8,7 +8,8 @@ export default new Vuex.Store({
         user: {
             name: 'Gustavo',
             email: 'jamelao@email.com'
-        }
+        },
+        formularioCurriculo: {}
     },
     mutations: {
         SET_USER (store, obj) {

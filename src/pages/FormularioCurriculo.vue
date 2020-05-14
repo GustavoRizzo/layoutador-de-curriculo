@@ -6,59 +6,59 @@
 
             <div class="form-group">
                 <label for="nome">Nome Completo</label>
-                <input type="text" id="nome" class="form-control" required autofocus v-model="infoPessoais.nome" />
+                <input type="text" id="nome" class="form-control"  autofocus v-model="infoPessoais.nome" />
             </div>
 
             <div class="form-group">
                 <label for="profissao">Profissão</label>
-                <input type="text" id="profissao" class="form-control" required  v-model="infoPessoais.profissao" />
+                <input type="text" id="profissao" class="form-control"   v-model="infoPessoais.profissao" />
             </div>
 
             <div class="form-group">
                 <label for="naturalidade">Naturalidade</label>
-                <input type="text" id="naturalidade" class="form-control" required v-model="infoPessoais.naturalidade" />
+                <input type="text" id="naturalidade" class="form-control"  v-model="infoPessoais.naturalidade" />
             </div>
 
             <div class="form-group">
                 <label for="dataNascimento">Data de Nascimento</label>
-                <input type="date" id="dataNascimento" class="form-control" required v-on:input="infoPessoais.dataNascimento = new Date($event.target.value)"/>
+                <input type="date" id="dataNascimento" class="form-control"  v-on:input="infoPessoais.dataNascimento = new Date($event.target.value)"/>
             </div>
 
             <div class="form-group">
                 <label for="estadoCivil">Estado Civil</label>
-                <input type="text" id="estadoCivil" class="form-control" required v-model="infoPessoais.estadoCivil" />
+                <input type="text" id="estadoCivil" class="form-control"  v-model="infoPessoais.estadoCivil" />
             </div>
 
             <div class="form-group">
                 <label for="ddd">DDD</label>
-                <input type="number" id="ddd" class="form-control" required v-model="infoPessoais.ddd" />
+                <input type="number" id="ddd" class="form-control"  v-model="infoPessoais.ddd" />
             </div>
 
             <div class="form-group">
                 <label for="celular">Celular</label>
-                <input type="tel" id="celular" class="form-control" required v-model="infoPessoais.celular" />
+                <input type="tel" id="celular" class="form-control"  v-model="infoPessoais.celular" />
             </div>
 
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" id="email" class="form-control" required v-model="infoPessoais.email" />
+                <input type="email" id="email" class="form-control"  v-model="infoPessoais.email" />
             </div>
         </div>
 
         <div class="form-endereco">
             <div class="form-group">
                 <label for="pais">Pais</label>
-                <input type="text" id="pais" class="form-control" required v-model="endereco.pais" />
+                <input type="text" id="pais" class="form-control"  v-model="endereco.pais" />
             </div>
 
             <div class="form-group">
                 <label for="uf">UF</label>
-                <input type="text" id="uf" class="form-control" required v-model="endereco.uf" />
+                <input type="text" id="uf" class="form-control"  v-model="endereco.uf" />
             </div>
 
             <div class="form-group">
                 <label for="cidade">Cidade</label>
-                <input type="text" id="cidade" class="form-control" required v-model="endereco.cidade" />
+                <input type="text" id="cidade" class="form-control"  v-model="endereco.cidade" />
             </div>
 
         </div>
@@ -86,6 +86,14 @@ export default {
             console.log('excutando método gravar.');
             console.log(this.infoPessoais);
             console.log(this.endereco);
+            console.log(this.$store.state.formularioCurriculo);
+
+            this.$store.state.formularioCurriculo = {
+                endereco: this.endereco,
+                infoPessoais: this.infoPessoais
+            };
+            console.log(this.$store.state.formularioCurriculo);
+            this.$router.push('/CurriculoLayoutado');
         }
     }
 }
